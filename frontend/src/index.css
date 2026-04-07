@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Navbar */
+.nav-links-desktop {
+  display: flex;
+  gap: 8px;
+}
+.nav-user-desktop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+.nav-menu-movil {
+  display: none;
+  flex-direction: column;
+  padding: 12px 20px 20px;
+  border-top: 1px solid #2a2a4e;
+  gap: 4px;
+}
+.nav-menu-movil.abierto {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav-links-desktop {
+    display: none;
+  }
+  .nav-user-desktop {
+    display: none;
+  }
+  .nav-hamburguesa {
+    display: block;
+  }
+
+  /* Tablas responsive */
+  .tabla-wrapper {
+    overflow-x: auto;
+  }
+
+  /* Dashboard grid */
+  .filtro-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
