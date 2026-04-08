@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import AuthProvider from "./context/AuthProvider";
-import useAuth from "./context/useAuth";
-import Navbar from "./components/Navbar";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Productos from "./pages/Productos";
-import Ventas from "./pages/Ventas";
-import Gastos from "./pages/Gastos";
+import AuthProvider from "./context/AuthProvider.jsx";
+import useAuth from "./context/useAuth.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Login from "./pages/Login.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import Productos from "./pages/Productos.jsx";
+import Ventas from "./pages/Ventas.jsx";
+import Gastos from "./pages/Gastos.jsx";
 
 function RutaProtegida({ children }) {
   const { token } = useAuth();
