@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import AuthProvider from "./context/authProvider";
-import useAuth from "./context/useAuth"; // 👈
+import AuthProvider from "./context/AuthProvider";
+import useAuth from "./context/useAuth";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -24,8 +24,6 @@ function AppContent() {
           padding: token ? "16px" : "0",
           maxWidth: "1100px",
           margin: "0 auto",
-
-          ...(window.innerWidth > 768 ? { padding: "24px" } : {}),
         }}
       >
         <Routes>
