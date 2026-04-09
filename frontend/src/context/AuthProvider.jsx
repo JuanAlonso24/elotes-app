@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AuthContext from "./authContext.jsx";
+import { AuthContext } from "./authContext";
 import api from "../api/axios";
 
 export default function AuthProvider({ children }) {
