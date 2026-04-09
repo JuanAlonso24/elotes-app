@@ -15,7 +15,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://elotes-41o8wrv5p-jmaa1.vercel.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
   }),
 );
