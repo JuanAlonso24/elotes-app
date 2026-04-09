@@ -18,6 +18,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://elotes-41o8wrv5p-jmaa1.vercel.app",
+      "https://elotes-app.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
   }),
