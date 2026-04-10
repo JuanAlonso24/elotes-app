@@ -13,14 +13,25 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+// 👇 acepta cualquier subdominio de vercel y localhost
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      const permitidos = [/\.vercel\.app$/, /^http:\/\/localhost/];
+      if (!origin || permitidos.some((p) => p.test(origin))) {
+        callback(null, true);
+      } else {
+        callback(new Error("No permitido por CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
 
 app.use(express.json());
 
-// Rutas publicas
 app.use("/api/auth", auth);
-
-// Rutas protegidas
 app.use("/api/productos", authMiddleware, produtos);
 app.use("/api/ventas", authMiddleware, ventas);
 app.use("/api/gastos", authMiddleware, gastos);
