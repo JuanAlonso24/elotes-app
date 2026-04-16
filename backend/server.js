@@ -17,19 +17,11 @@ app.use(cors());
 
 app.use(express.json());
 
-// app.use("/api/auth", auth);
-// app.use("/api/productos", authMiddleware, produtos);
-// app.use("/api/ventas", authMiddleware, ventas);
-// app.use("/api/gastos", authMiddleware, gastos);
-// app.use("/api/reportes", authMiddleware, reportes);
-
-app.get("/", (req, res) => {
-  res.send("API funcionando ");
-});
-
-app.post("/api/auth/login", (req, res) => {
-  res.json({ msg: "login test OK" });
-});
+app.use("/api/auth", auth);
+app.use("/api/productos", authMiddleware, produtos);
+app.use("/api/ventas", authMiddleware, ventas);
+app.use("/api/gastos", authMiddleware, gastos);
+app.use("/api/reportes", authMiddleware, reportes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
