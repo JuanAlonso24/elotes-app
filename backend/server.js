@@ -15,6 +15,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("API funcionando 🚀");
+});
+
 app.use("/api/auth", auth);
 app.use("/api/productos", authMiddleware, produtos);
 app.use("/api/ventas", authMiddleware, ventas);
