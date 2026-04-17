@@ -97,7 +97,7 @@ elotes-app/
 ### 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/elotes-app.git
+git clone https://github.com/JuanAlonso24/elotes-app.git
 cd elotes-app
 ```
 
